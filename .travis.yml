@@ -8,4 +8,4 @@ install:
 script:
   - hugo
 after_script:
-  - firebase deploy --token $FIREBASE_TOKEN --project $FIREBASE_PROJECT
+  - firebase deploy --token $FIREBASE_TOKEN
