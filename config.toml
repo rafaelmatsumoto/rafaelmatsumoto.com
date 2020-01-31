@@ -1,0 +1,36 @@
+baseURL = "https://personal-blog-9dfd7.web.app/"
+languageCode = "en-us"
+title = "Rafael M."
+theme = "hugo-ink"
+paginate = 5
+
+copyright = "©"
+
+[params]
+	subtitle = "A personal blog"
+
+	avatar = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
+
+	featherIconsCDN = true
+
+
+# Nav.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/rafaelmatsumoto/"
