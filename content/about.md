@@ -1,14 +1,18 @@
 ---
-title: "About"
+title: "Sobre"
 date: 2020-01-30T21:37:58+05:30
 type: "page"
 ---
 
-Hi, my name is Rafael Stein Matsumoto. I'm a brazillian software developer.
+Olá, me chamo Rafael Stein Matsumoto, e sou desenvolvedor de software.
 
-I like to build cool stuff using Node and Go. I'm also interested in creating the best
-local development experience through Docker, Docker Compose and Serverless as well as
-making things easier to ship to production.
+Tenho como objetivo principal construir software de qualidade utilizando tecnologias que
+melhor atendem o problema e proporcionam a melhor experiência de desenvolvimento.
 
-When not doing tech related stuff, I will probably be swimming, reading, watching movies or hanging out with friends. I am
-not currently active in any mainstream social media, but you can still find me on [Reddit](https://www.reddit.com/user/rafaelmatsumoto) and [Goodreads](https://www.goodreads.com/user/show/79981049-rafael-stein).
+Acredito que compartilhar conhecimento é obrigação de todo desenvolvedor de software.
+
+Não acredito cegamente em nenhuma linguagem, framework, ferramenta. Mas gosto bastante de
+Ruby, Node, Docker, Go e Firebase.
+
+Se não estou mexendo com tecnologia, provavelmente estarei nadando, lendo, assistindo filmes ou simplesmente dando uma volta por aí. [Não sou muito ativo
+nas redes sociais](https://www.medicalnewstoday.com/articles/321498.php#1), mas você ainda pode me encontrar no [Reddit](https://www.reddit.com/user/rafaelmatsumoto) e [Goodreads](https://www.goodreads.com/user/show/79981049-rafael-stein).
