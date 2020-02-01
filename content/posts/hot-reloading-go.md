@@ -6,9 +6,9 @@ draft: false
 tags: [docker, go, docker-compose]
 ---
 
-*O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'*
+_O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'_
 
-Ao realizar leitura do capítulo citado anteriormente, que mencionava a facilidade de se implementar
+Ao realizar a leitura do capítulo citado anteriormente, que mencionava a facilidade de se construir
 um web server em Go, tive a ideia de
 implementar um hot-reloader do zero.
 
@@ -51,7 +51,7 @@ Para rodar a aplicação é preciso executar o comando:
 
 <pre>go run main.go &</pre>
 
-Ao realizar uma requisição GET:
+Ao realizar uma requisição GET a seguinte resposta é obtida:
 
 <pre>http localhost:8000
 <font color="#0087FF">HTTP</font><font color="#8A8A8A">/</font><font color="#00AFAF">1.1</font><font color="#8A8A8A"> </font><font color="#00AFAF">200</font><font color="#8A8A8A"> </font><font color="#AF8700">OK</font>
@@ -81,18 +81,19 @@ A biblioteca reflex permite adicionar um listener para executar um comando sempr
 for alterado, a configuração que utilizei foi:
 
 ./reflex.conf
+
 ```txt
 -r '(\.go$|go\.mod)' -s go run main.go &
 ```
 
-A partir dessa configuração, toda vez que um arquivo com a extensão .go ou o go.mod for alterado, o servidor é
+A configuração codificada determina que toda vez que um arquivo com a extensão .go ou com o nome go.mod for alterado, o servidor é
 derrubado e reinicializado.
 
 Após essa etapa, definimos um docker-compose.yml para facilitar a utilização do Docker:
 
 ```yml
 # ./docker-compose.yml
-version: '2.4'
+version: "2.4"
 services:
   app:
     build: .
@@ -131,4 +132,3 @@ E então rodamos o comando <pre>docker-compose up -d</pre> e pronto, toda nova a
 Exemplo na prática:
 
 <script id="asciicast-1lIUUTqHHKZuQi50OOQUQ3G66" src="https://asciinema.org/a/1lIUUTqHHKZuQi50OOQUQ3G66.js" async></script>
-
