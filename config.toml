@@ -19,7 +19,6 @@ copyright = "©"
 
 	featherIconsCDN = true
 
-
 # Nav.
 [[menu.main]]
 name = "Home"
@@ -34,6 +33,11 @@ weight = 2
 [[menu.main]]
 name = "Sobre"
 url = "/about"
+weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
 weight = 3
 
 [[params.social]]
@@ -45,3 +49,4 @@ url = "https://github.com/rafaelmatsumoto/"
 name = "Goodreads"
 icon = "book"
 url = "https://www.goodreads.com/user/show/79981049-rafael-stein"
+
