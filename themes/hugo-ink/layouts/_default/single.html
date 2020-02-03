@@ -20,7 +20,9 @@
 				{{ end }}
 				<div class="matter">
 					<h1 class="title">{{ .Title }}</h1>
+					{{ if ne .Type "page" }}
 					{{ partial "readingtime.html" . }}
+					{{ end }}
 				</div>
 			</div>
 
