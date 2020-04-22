@@ -46,7 +46,7 @@ icon = "github"
 url = "https://github.com/rafaelmatsumoto/"
 
 [[params.social]]
-name = "Goodreads"
-icon = "book"
-url = "https://www.goodreads.com/user/show/79981049-rafael-stein"
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/RafaelMatsumot0"
 

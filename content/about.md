@@ -6,13 +6,11 @@ type: "page"
 
 Olá, me chamo Rafael Stein Matsumoto, e sou desenvolvedor de software.
 
-Tenho como objetivo principal construir software de qualidade utilizando tecnologias que
-melhor atendem o problema, e proporcionam a melhor experiência de desenvolvimento.
+Acredito que desenvolver software de qualidade, e que atenda a necessidade do usuário já uma tarefa complexa o bastante. O processo de escrever, testar e publicar aplicativos deveria ser tão simples quanto plugar uma máquina na tomada, por isso busco automatizar tarefas sempre que possível.
 
-Penso que compartilhar conhecimento é obrigação de todo desenvolvedor de software.
+Também penso que compartilhar conhecimento é um dever da profissão.
 
-Não confio cegamente em nenhuma linguagem, framework, ferramenta. Mas gosto bastante de
-Node, Docker, Go e Firebase.
+Em relação a tecnologias específicas gosto bastante de
+Node, Docker, Go, Ruby e Firebase.
 
-Se não estou trabalhando com tecnologia, provavelmente estarei nadando, lendo, assistindo filmes ou simplesmente dando uma volta por aí. [Não sou muito ativo
-nas redes sociais](https://www.medicalnewstoday.com/articles/321498.php#1), mas você ainda pode me encontrar no [Reddit](https://www.reddit.com/user/rafaelmatsumoto) e [Goodreads](https://www.goodreads.com/user/show/79981049-rafael-stein).
+Se não estou trabalhando com tecnologia, provavelmente estarei lendo, assistindo algum filme ou simplesmente dando uma volta por aí. Não sou muito ativo nas redes sociais, mas você pode me encontrar no [Reddit](https://www.reddit.com/user/rafaelmatsumoto) e [Twitter](https://twitter.com/RafaelMatsumot0).
