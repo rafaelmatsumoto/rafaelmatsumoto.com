@@ -12,13 +12,12 @@ utilizando o Docker.
 - Arquivo .dockerignore:
 
 É comum que a maioria das aplicaçoẽs adote esta prática,
-porém vale ressaltar que é obrigatório adicionar a pasta node_modules (e 
-várias outras) ao arquivo .dockerignore.
+porém vale ressaltar a necessidade de adicionar a pasta node_modules ao arquivo .dockerignore.
 
 Além de reduzir drasticamente o tamanho da imagem, também garante que não
-haverá problemas de dependências instaladas no sistema operacional da máquina (Windows/macOS) com o container (Linux).
+haverá problemas de compatibilidade das dependências instaladas no sistema operacional da máquina (Windows/macOS) com o container (Linux).
 
-*Antes*
+_Antes_
 
 ```bash {hl_lines=[2]}
 docker build . -t node-docker
@@ -44,7 +43,7 @@ Successfully built 57e18f433874
 Successfully tagged node-docker:latest
 ```
 
-*Depois*
+_Depois_
 
 ```bash {hl_lines=[2]}
 docker build . -t node-docker
@@ -72,21 +71,21 @@ Successfully tagged node-docker:latest
 
 - Dockerfile
 
-*Esse Dockerfile deve ser utilizado apenas em ambiente de desenvolvimento*
+_Esse Dockerfile deve ser utilizado apenas em ambiente de desenvolvimento_
 
 ```dockerfile
 # As versões do Linux Alpine são extremamente leves e seguras.
 FROM node:12-alpine
 
 # O Docker utiliza cache ao buildar linhas que não mudam
-# É raro que a porta exposta mude, 
+# É raro que a porta exposta mude,
 # então busque colocá-la nas primeiras linhas do arquivo,
 # ajuda a reduzir o tempo de build.
 EXPOSE 3000
 
 WORKDIR /app
 
-# O wildcard * avisa ao docker para copiar o lock file, 
+# O wildcard * avisa ao docker para copiar o lockfile,
 # mas não falhar caso esse não exista.
 COPY package.json yarn.lock* ./
 
@@ -102,7 +101,7 @@ CMD ["yarn", "start"]
 ```yml
 # A versão 2.x do docker-compose.yml é recomendada para
 # ambientes de desenvolvimento.
-version: '2.4'
+version: "2.4"
 
 services:
   app:
@@ -114,9 +113,9 @@ services:
     depends_on:
       db:
         # Nessa versão (^2.4) é possível definir uma condição
-        # para que o serviço de fato espere 
+        # para que o serviço de fato espere
         # até que o container de dependência esteja realmente pronto,
-        # nesse caso quando o postgres estive disponível para
+        # nesse caso quando o postgres estiver disponível para
         # conexão.
         condition: service_healthy
 

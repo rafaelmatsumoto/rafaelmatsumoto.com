@@ -8,11 +8,11 @@ tags: [docker, go, docker-compose]
 
 _O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'_
 
-Ao realizar a leitura do capítulo citado anteriormente, que mencionava a facilidade de se construir
-um web server em Go, tive a ideia de
-implementar um hot-reloader do zero.
+Há algum tempo ao realizar a leitura do capítulo citado acima, que mencionava a facilidade de se construir
+um web server com a linguagem Go, tive a ideia de
+implementar um hot-reloader do zero, ferramente muito comum ao se utilizar um framework web.
 
-Segue um passo-a-passo de como realizei essa implementação.
+A seguir há um passo-a-passo de como realizei essa implementação.
 
 Código: https://github.com/rafaelmatsumoto/hotreloading-go
 
