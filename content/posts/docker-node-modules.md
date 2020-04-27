@@ -1,6 +1,6 @@
 ---
 title: "Docker para aplicações Node"
-description: "Melhorando a configuração do Docker para aplicações Node"
+description: "Melhorando a configuração do Docker em aplicações Node"
 date: 2020-02-02T17:57:24-03:00
 draft: false
 tags: [docker, node, docker-compose]
@@ -71,7 +71,7 @@ Successfully tagged node-docker:latest
 
 - Dockerfile
 
-_Esse Dockerfile deve ser utilizado apenas em ambiente de desenvolvimento_
+_Esse Dockerfile é adequado apenas para ambientes de desenvolvimento_
 
 ```dockerfile
 # As versões do Linux Alpine são extremamente leves e seguras.
