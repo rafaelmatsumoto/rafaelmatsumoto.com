@@ -8,9 +8,9 @@ tags: [docker, go, docker-compose]
 
 _O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'_
 
-Há algum tempo ao realizar a leitura do capítulo citado acima, que mencionava a facilidade de se construir
+Ao realizar a leitura do capítulo citado acima, que mencionava a facilidade de se construir
 um web server com a linguagem Go, tive a ideia de
-implementar um hot-reloader do zero, ferramente muito comum ao se utilizar um framework web.
+implementar um hot-reloader do zero, ferramenta muito comum em frameworks para a web e que auxilia consideravelmente na produtividade ao se programar.
 
 A seguir há um passo-a-passo de como realizei essa implementação.
 
@@ -86,10 +86,9 @@ for alterado, a configuração que utilizei foi:
 -r '(\.go$|go\.mod)' -s go run main.go &
 ```
 
-A configuração codificada determina que toda vez que um arquivo com a extensão .go ou com o nome go.mod for alterado, o servidor é
-derrubado e reinicializado.
+Essa configuração determina que, se um arquivo com a extensão .go ou com o nome go.mod for alterado, o servidor é reinicializado automaticamente.
 
-Após essa etapa, definimos um docker-compose.yml para facilitar a utilização do Docker:
+Após essa etapa, definimos um arquivo docker-compose.yml para facilitar a utilização do Docker:
 
 ```yml
 # ./docker-compose.yml
@@ -104,7 +103,7 @@ services:
       - 8000:8000
 ```
 
-E alterar o script principal para o servidor aceitar requisições externas:
+E alteramos o script principal para o servidor aceitar requisições externas:
 
 ```golang {hl_lines=[13,"36-43"]}
 // ./main.go
