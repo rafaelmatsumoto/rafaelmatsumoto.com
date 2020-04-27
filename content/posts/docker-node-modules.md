@@ -130,4 +130,7 @@ services:
     healthcheck:
       # Teste para verificar a conexão com o banco de dados.
       test: pg_isready -U postgres -h 127.0.0.1
+
+volumes:
+  db-data:
 ```
