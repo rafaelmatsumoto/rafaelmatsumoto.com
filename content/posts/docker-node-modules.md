@@ -7,15 +7,12 @@ tags: [docker, node, docker-compose]
 ---
 
 Algumas dicas para melhorar o desenvolvimento de aplicações Node
-utilizando o Docker.
+que utilizam o Docker.
 
 - Arquivo .dockerignore:
 
-É comum que a maioria das aplicaçoẽs adote esta prática,
-porém vale ressaltar a necessidade de adicionar a pasta node_modules ao arquivo .dockerignore.
-
-Além de reduzir drasticamente o tamanho da imagem, também garante que não
-haverá problemas de compatibilidade das dependências instaladas no sistema operacional da máquina (Windows/macOS) com o container (Linux).
+É comum que na maioria das aplicações se adote esta prática,
+porém a pasta node_modules aumenta de forma considerável o tamanho das imagens, e pode trazer problemas de compatibilidade entre máquina e container. Por isso colocá-los no arquivo .dockerignore é praticamente obrigatório.
 
 _Antes_
 
@@ -71,7 +68,7 @@ Successfully tagged node-docker:latest
 
 - Dockerfile
 
-_Esse Dockerfile é adequado apenas para ambientes de desenvolvimento_
+_Dockerfile recomendado apenas para ambientes de desenvolvimento_
 
 ```dockerfile
 # As versões do Linux Alpine são extremamente leves e seguras.
@@ -99,7 +96,7 @@ CMD ["yarn", "start"]
 - docker-compose.yml
 
 ```yml
-# A versão 2.x do docker-compose.yml é recomendada para
+# A versão 2.x do docker-compose.yml é a recomendada para
 # ambientes de desenvolvimento.
 version: "2.4"
 
@@ -115,7 +112,7 @@ services:
         # Nessa versão (^2.4) é possível definir uma condição
         # para que o serviço de fato espere
         # até que o container de dependência esteja realmente pronto,
-        # nesse caso quando o postgres estiver disponível para
+        # neste caso quando o postgres estiver disponível para
         # conexão.
         condition: service_healthy
 
@@ -128,7 +125,7 @@ services:
       # performance e até mesmo não funcionar.
       - db-data:/var/lib/postgresql/data
     healthcheck:
-      # Teste para verificar a conexão com o banco de dados.
+      # Teste para verificar a conexão.
       test: pg_isready -U postgres -h 127.0.0.1
 
 volumes:

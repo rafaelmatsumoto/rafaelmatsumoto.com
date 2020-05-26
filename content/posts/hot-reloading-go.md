@@ -8,11 +8,11 @@ tags: [docker, go, docker-compose]
 
 _O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'_
 
-Ao realizar a leitura do capítulo citado acima, que mencionava a facilidade de se construir
+Ao realizar a leitura do capítulo citado, notei a facilidade de se iniciar
 um web server com a linguagem Go, tive a ideia de
-implementar um hot-reloader do zero, ferramenta muito comum em frameworks para a web e que auxilia consideravelmente na produtividade ao se programar.
+implementar um hot-reloader do zero, ferramenta muito comum em frameworks para a web e que auxilia consideravelmente na produtividade ao programar.
 
-A seguir há um passo-a-passo de como realizei essa implementação.
+A seguir há um passo-a-passo de como realizei a implementação.
 
 Código: https://github.com/rafaelmatsumoto/hotreloading-go
 
@@ -51,7 +51,7 @@ Para rodar a aplicação é preciso executar o comando:
 
 <pre>go run main.go &</pre>
 
-Ao realizar uma requisição GET a seguinte resposta é obtida:
+Após isso, ao realizar uma requisição GET a seguinte resposta é obtida:
 
 <pre>http localhost:8000
 <font color="#0087FF">HTTP</font><font color="#8A8A8A">/</font><font color="#00AFAF">1.1</font><font color="#8A8A8A"> </font><font color="#00AFAF">200</font><font color="#8A8A8A"> </font><font color="#AF8700">OK</font>
@@ -77,8 +77,8 @@ COPY reflex.conf /
 ENTRYPOINT ["reflex", "-c", "/reflex.conf"]
 ```
 
-A biblioteca reflex permite adicionar um listener para executar um comando sempre que algum tipo de arquivo
-for alterado, a configuração que utilizei foi:
+A biblioteca [reflex](https://golang.org/pkg/reflect/) permite adicionar um listener para executar comandos sempre que algum tipo de arquivo
+for alterado, a configuração utilizada foi:
 
 ./reflex.conf
 
@@ -86,9 +86,9 @@ for alterado, a configuração que utilizei foi:
 -r '(\.go$|go\.mod)' -s go run main.go &
 ```
 
-Essa configuração determina que, se um arquivo com a extensão .go ou com o nome go.mod for alterado, o servidor é reinicializado automaticamente.
+Essa configuração determina que, se um arquivo com a extensão .go ou nomeado go.mod for alterado, o servidor é reinicializado automaticamente.
 
-Após essa etapa, definimos um arquivo docker-compose.yml para facilitar a utilização do Docker:
+Após essa etapa, criamos um arquivo docker-compose.yml para auxiliar no uso do Docker:
 
 ```yml
 # ./docker-compose.yml
@@ -126,7 +126,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-E então rodamos o comando <pre>docker-compose up -d</pre> e pronto, toda nova alteração será automaticamente implementada.
+Então rodamos o comando <pre>docker-compose up -d</pre> e é isto, toda nova alteração será automaticamente implementada.
 
 Exemplo na prática:
 

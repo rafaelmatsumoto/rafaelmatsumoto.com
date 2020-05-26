@@ -6,7 +6,7 @@ draft: false
 tags: [docker, docker-compose]
 ---
 
-Recentemente tive de pesquisar sobre o protocolo FTP para um trabalho acadêmico, e para ter um exemplo apresentável, resolvi fazer o setup de um servidor local.
+Recentemente tive de pesquisar sobre o protocolo FTP para um trabalho acadêmico, e para ter algo apresentável, resolvi fazer o setup de um servidor local.
 
 A primeira ideia que tive foi buscar uma imagem no Docker Hub, e a experiência acabou sendo tão simples que resolvi compartilhar no repositório a seguir.
 
