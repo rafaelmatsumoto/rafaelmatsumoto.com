@@ -50,3 +50,8 @@ name = "Twitter"
 icon = "twitter"
 url = "https://twitter.com/RafaelMatsumot0"
 
+[[params.social]]
+name = "Goodreads"
+icon = "book"
+url = "https://www.goodreads.com/user/show/79981049-rafael-stein"
+
