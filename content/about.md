@@ -10,4 +10,4 @@ Gosto de estatística, Docker e Python.
 
 Tenho como hobby a leitura, escrita e natação.
 
-Redes sociais que me mantenho ativo: [Goodreads](https://www.reddit.com/user/rafaelmatsumoto) e [Twitter](https://twitter.com/RafaelMatsumot0).
+Redes sociais que me mantenho ativo: [Goodreads](https://www.goodreads.com/rafaelmatsumoto) e [Twitter](https://twitter.com/RafaelMatsumot0).
