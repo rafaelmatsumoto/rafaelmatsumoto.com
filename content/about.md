@@ -8,7 +8,7 @@ Olá, me chamo Rafael Stein Matsumoto, e atualmente trabalho como desenvolvedor 
 
 Gosto de Docker, redes e tenho Go como linguagem de programação preferida.
 
-Esse blog foi criado para seguir os conceitos de: [Digital Garden](https://joelhooks.com/digital-garden) e [Learn in Public](https://www.swyx.io/writing/learn-in-public/)
+Esse blog foi criado seguindo os conceitos de: [Digital Garden](https://joelhooks.com/digital-garden) e [Learn in Public](https://www.swyx.io/writing/learn-in-public/)
 
 Tenho como hobby a leitura, escrita e natação.
 
