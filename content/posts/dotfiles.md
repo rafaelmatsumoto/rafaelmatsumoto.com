@@ -1,7 +1,9 @@
 ---
 title: "Dotfiles"
 date: 2020-07-22T22:53:00-03:00
+description: "O que são dotfiles e porque utilizá-los?"
 draft: false
+tags: [general]
 ---
 
 # O que são dotfiles?
