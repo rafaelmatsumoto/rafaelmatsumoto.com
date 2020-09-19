@@ -13,7 +13,7 @@ copyright = "©"
 	unsafe= true
 
 [params]
-	subtitle = "Uma coleção de posts sobre tecnologia"
+	subtitle = "Digital garden"
 
 	avatar = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
 
