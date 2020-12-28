@@ -1,6 +1,6 @@
-baseURL = "https://rafaelmatsumoto.dev/"
+baseURL = "https://rafaelmatsumoto.com/"
 languageCode = "en-us"
-title = "Rafael M."
+title = "Rafael Matsumoto"
 theme = "hugo-ink"
 paginate = 5
 
