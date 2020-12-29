@@ -12,7 +12,7 @@ Durante os últimos dois anos passei da fase de ser estagiário, para a fase de 
 
 - Prática de code review: essa com certeza é feature mais fundamental para se buscar num estágio. É bem provável que você, iniciante na área, ainda não conheça quais são os problemas de não seguir boas práticas ao programar, e isso é absolutamente normal. Por isso ter uma cultura forte de code review, isto é, seus colegas de trabalho (normalmente mais experientes) revisando seu código consistentemente é fundamental no desenvolvimento como profissional, é nesse momento em que você de fato vai aprender a programar melhor e o porquê é programar dessa forma.
 
-- Cultura empresarial: o quão prestativas são as pessoas com quem se vai trabalhar é algo importante para todos os níveis de carreira, porém nessa fase, onde você precisará de ajuda constante é ainda mais necessário.
+- Cultura empresarial: o quão prestativas são as pessoas com quem se vai trabalhar é algo importante para todos os níveis de carreira, porém nessa fase, onde você precisará de ajuda constante é ainda mais necessário (https://www.themuse.com/advice/the-3-career-mentors-everyone-should-have).
 
 - Diversificação de atividades: é bem interessante que você tenha experiência de mercado em diversas atividades da profissão (backend, frontend, DevOps/SRE, QA, Customer Support), pois isso lhe ajudará na hora de escolher seu próximo emprego como júnior ou então de decidir em qual área da mesma empresa irá trabalhar.
 
