@@ -5,11 +5,11 @@ draft: false
 tags: [finance, til1]
 ---
 
-A avaliação de um FII é feita com base em algumas métricas: qualidade dos ativos, qualidade da gestão, preço e potencial de distribuição de dividendos.
+A avaliação de um FII é feita com base em alguns fatores: qualidade dos ativos, qualidade da gestão, preço e potencial de distribuição de dividendos.
 
 ## Qualidade dos ativos
 
-A qualidade dos ativos praticamente só pode ser mensurada ao avaliar [fundos de tijolo](https://rafaelmatsumoto.com/til/tipos-de-fiis/), pois somente esses possuem todas as métricas necessárias.
+A qualidade dos ativos (normalmente) só pode ser mensurada ao avaliar [fundos de tijolo](https://rafaelmatsumoto.com/til/tipos-de-fiis/), pois somente esses possuem todas as métricas necessárias.
 
 A análise dos ativos é dividida em três partes:
 
