@@ -1,30 +1,26 @@
 ---
-title: "Análise de FIIs -  Gestão"
+title: "Análise de FIIs - Gestão"
 date: 2021-01-05T15:56:32-03:00
 draft: false
 tags: [finance, til1]
 ---
 
-## Qualidade da gestão
+## Histórico da gestora
 
-1- Histórico da gestora
+Análise simples, que pode ser feita com uma busca no Google. O futuro cotista deve certificar que a gestora do fundo é uma empresa séria e não possui histórico de fraudes.
 
-Normalmente é feita com uma simples busca no Google pelo ticker do fundo e consequente pesquisa sobre a gestora.
-
-Algumas gestoras de tradição e com renome são:
+Algumas gestoras de renome no mercado:
 
 - XP
 - Rio Bravo
-- Credit suisse
-- Super nova capital
+- Credit Suisse
+- BTG Pactual
 - Kinea
 
-2- Relação da gestora com os cotistas
+## Relacionamento com os cotistas
 
-Essa a parte em que o investidor precisa fazer a leitura do relatório gerencial disponibilizado pela gestão.
+É nessa parte que o investidor precisa fazer a leitura do relatório gerencial, visto que uma boa gestão tem por obrigação apresentar um documento completo, mas ao mesmo tempo com linguagem acessível.
 
-Uma boa gestão tem por obrigação fazer um relatório completo, mas ao mesmo tempo com linguagem simples.
-
-Exemplo de relatório HGLG11:
+Exemplo de relatório HGLG11 (Credit Suisse):
 
 https://fnet.bmfbovespa.com.br/fnet/publico/exibirDocumento?id=133417&amp;flnk
