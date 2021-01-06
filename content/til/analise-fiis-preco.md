@@ -20,7 +20,7 @@ Exemplo de avaliação do valor patrimonial:
 ## P / VP
 
 A partir do cálculo do VP, é possível analisar o
-preço da cota, fazendo a divisão PREcO_COTA / VP
+preço da cota, fazendo a divisão PRECO_COTA / VP
 
 Normalmente a referência que se utiliza é:
 
