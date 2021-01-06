@@ -5,7 +5,7 @@ draft: false
 tags: [finance, til1]
 ---
 
-## Avaliação de valor dos FIIs
+## Avaliação de preço (FIIs)
 
 A principal referência de valor em FIIs é o Valor Patrimonial, que é a soma de todos os ativos do fundo (imóveis, investimentos e dinheiro em caixa) menos as suas obrigações (taxas e custos já conhecidos)
 
