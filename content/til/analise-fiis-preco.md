@@ -7,20 +7,16 @@ tags: [finance, til1]
 
 ## Avaliação de valor dos FIIs
 
-O principal referencial de valor dos FIIs é o Valor Patrimonial.
+A principal referência de valor em FIIs é o Valor Patrimonial, que é a soma de todos os ativos do fundo (imóveis, investimentos e dinheiro em caixa) menos as suas obrigações (taxas e custos já conhecidos)
 
-O valor patrimonial é a soma de todos os ativos do fundo (imóveis, investimentos e dinheiro em caixa) menos as suas obrigações (taxas e custos já conhecidos)
-
-Normalmente esse valor já é disponibilizado pelas plataformas de análise de fundos.
-
-Exemplo de avaliação do valor patrimonial:
+Normalmente esse valor já é disponibilizado pelas plataformas de análise de fundos, como no site Funds Explorer:
 
 [HGLG11](https://www.fundsexplorer.com.br/funds/hglg11)
 
 ## P / VP
 
-A partir do cálculo do VP, é possível analisar o
-preço da cota, fazendo a divisão PRECO_COTA / VP
+A partir do do VP, é possível analisar o
+preço da cota fazendo a divisão PRECO_COTA / VP
 
 Normalmente a referência que se utiliza é:
 
