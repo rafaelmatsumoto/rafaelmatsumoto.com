@@ -5,7 +5,7 @@ draft: false
 tags: [finance, til1]
 ---
 
-A maior parte dos FIIs distribui os rendimentos de forma mensal. Um valor razoável fica entre 0,5% (sobre o patrimônio investido) e 0,8% ao mês, normalmente se trata de fundos bem sólidos. Fundos que geram mais do que 0.8% são mais lucrativos, porém mais arriscados, normalmente possuem algum "defeito" e por isso precisam distribuir mais dividendos para atrair os investidores.
+A maior parte dos FIIs distribui rendimentos de forma mensal. Um valor razoável fica entre 0,5% (sobre o patrimônio investido) e 0,8% ao mês, normalmente se trata de fundos bem sólidos. Fundos que geram mais do que 0.8% são mais lucrativos, porém mais arriscados, normalmente possuem algum "defeito" e por isso precisam distribuir mais dividendos para atrair os investidores.
 
 Critérios que vão determinar a consistência no desempenho:
 
