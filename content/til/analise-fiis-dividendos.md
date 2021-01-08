@@ -10,7 +10,7 @@ A maior parte dos FIIs distribui rendimentos de forma mensal. Um valor razoável
 Critérios que vão determinar a consistência no desempenho:
 
 - Distribuições de rendimento (Dividend Yield)
-- P / LP
+- P / VP
 - Representação no IFIX
 - Vencimento dos contratos em relação a receita dos imóveis ou títulos de recebíveis
 
