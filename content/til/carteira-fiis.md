@@ -5,13 +5,12 @@ draft: false
 tags: [finance, til1]
 ---
 
-## Carteira balanceada de FIIs
-
+## Carteira balanceada de longo prazo (FIIs)
 
 40% Fundos de tijolo: ativos sólidos
 
 30% Fundos de papel: Maior risco, maior retorno
 
-30% FOF (Fundos de fundo): diversificação
+30% FOFs (Fundo de fundos): diversificação
 
 Note que dentro da porcentagem de fundo de tijolo também deve haver diversificação entre imóveis comerciais, industrias, shoppings, etc.
