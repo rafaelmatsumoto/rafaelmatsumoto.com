@@ -5,7 +5,7 @@ draft: false
 tags: [finance, til1]
 ---
 
-- Tipo: Tijolo, galpões
+- Tipo: Tijolo, galpões logísticos
 
 - Administração: Vórtx DTVM LTDA (Bom)
 
@@ -15,13 +15,13 @@ tags: [finance, til1]
 
 - Empresas locatárias: Leroy Merlin, Via Varejo, Fedex, Unilever, Renner (Ótimo)
 
-- Contratos atípicos: 66% da carteira
+- Contratos atípicos: 66% da carteira (Bom)
 
 - Demonstração baseada no último dividendo R$: 0,60 (Dez/2020):
 
     - Possuindo 100 ações (R$: 12.052 - Cotação 16/01/21) você receberia 60 reais mensais
 
-- Veredito: O XPLG11 é um dos melhores fundos de logística do mercado, possui ótimos indicadores e tem uma diversificação de ativos invejável, além de estar num segmento com potencial de crescimento, o único problema do fundo é a baixa rentabilidade atual.
+- Veredito: O XPLG11 é um dos melhores fundos de logística do mercado, possui ótimos indicadores e tem uma diversificação de ativos invejável, além de estar num segmento com potencial de crescimento, o único problema do ativo é a baixa rentabilidade.
 
 Referências: 
 
