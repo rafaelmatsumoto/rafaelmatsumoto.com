@@ -23,4 +23,10 @@ tags: [finance, til1]
 
 - Veredito: O XPLG11 é um dos melhores fundos de logística do mercado, possui ótimos indicadores e tem uma diversificação de ativos invejável, além de estar num segmento com potencial de crescimento, o único problema do fundo é a baixa rentabilidade atual.
 
+Referências: 
+
+- https://conteudos.xpi.com.br/fundos-imobiliarios/xp-log-fii-xplg11/
+- https://www.fundsexplorer.com.br/funds/xplg11
+- https://xplog.riweb.com.br/
+
 *Não é indicação de compra*
