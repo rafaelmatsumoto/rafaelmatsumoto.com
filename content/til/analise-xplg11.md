@@ -11,13 +11,13 @@ tags: [finance, til1]
 
 - P/VP: 1.12 (Ok)
 
-- Vacância: 9.2% (Bom)
+- Vacância atual: 9.2% (Bom)
 
 - Empresas locatárias: Leroy Merlin, Via Varejo, Fedex, Unilever, Renner (Ótimo)
 
 - Contratos atípicos: 66% da carteira (Bom)
 
-- Demonstração baseada no último dividendo R$: 0,60 (Dez/2020):
+- Demonstração baseada no último rendimento R$: 0,60 (Dez/2020):
 
     - Possuindo 100 ações (R$: 12.052 - Cotação 16/01/21) você receberia 60 reais mensais
 
