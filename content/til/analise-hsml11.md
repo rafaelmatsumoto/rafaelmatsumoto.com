@@ -5,7 +5,7 @@ draft: false
 tags: [finance, til1]
 ---
 
-- Tipo: Tijolo, shoppings center
+- Tipo: Tijolo, shopping centers
 
 - Administração: Santander Caceis Brasil DTVM
 
