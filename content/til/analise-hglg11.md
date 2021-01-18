@@ -7,7 +7,7 @@ tags: [finance, til1]
 
 - Tipo: Tijolo, logística
 
-- Administração: Credit Suisse
+- Administração: Credit Suisse (Bom)
 
 - P/VP: 1.23 (Ok)
 
@@ -19,7 +19,7 @@ tags: [finance, til1]
 
     - Possuindo 100 cotas (R$: 18.095 - Cotação 18/01/2021) você receberia 263 reais mensais
 
-    - Nota: Esse último dividendo foi maior por conta de uma quebra de contrato que gerou um multa.
+    - Nota: Esse último dividendo foi alto por conta de uma quebra de contrato que gerou um multa.
 
 - Veredito: O HGLG11 é provavelmnte o melhor FII da bolsa, tem ótimos indicadores e normalmente paga bons redimentos, além de ter grande potencial de crescimento. Semelhante a WEG no ramo das ações, alguns analistas argumentam que o ativo está um pouco caro.
 
