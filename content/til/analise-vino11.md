@@ -21,3 +21,10 @@ tags: [finance, til1]
 
 
 - Veredito: No geral é um ótimo fundo, a única red flag é o fato da gestora representar 26% da receita, mas é algo que tende a diminuir com o passar do tempo.
+
+Referências:
+
+- https://fiis.com.br/vino11/
+- https://fundamentei.com/fiis/vino
+
+*Não é indicação de compra*
