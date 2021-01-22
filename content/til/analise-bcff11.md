@@ -15,7 +15,7 @@ tags: [finance, til1]
 
     - Possuindo 100 cotas (R$: 9209 - Cotação 22/01/2021) você receberia 53 reais mensais
 
-- Veredito: Muitos analistas recomendam a compra do fundo por conta da diversificação, mas no caso desse a receita é gerada a partir de trade pelos administradores, o que não é um bom fundamento para um FII. Além disso, a gestora (BTG Pactual) tem histórico de casos de corrupção.
+- Veredito: Muitos analistas recomendam a compra do fundo por conta da diversificação, mas no caso desse a receita é gerada a partir de trade dos administradores, o que não é um bom fundamento para um FII. Além disso, a gestora (BTG Pactual) tem histórico de casos de corrupção.
 
 Referências:
 
