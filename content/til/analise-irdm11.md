@@ -1,6 +1,6 @@
 ---
 title: "Análise de fundos - IRDM11"
-date: 2021-01-24T20:02:47-03:00
+date: 2021-01-24T18:02:47-03:00
 draft: false
 tags: [finance, til1]
 ---
@@ -17,7 +17,7 @@ tags: [finance, til1]
 
     - Possuindo 100 cotas (R$: 13.879 - Cotação 24/01/2021) você receberia 159 reais mensais
 
-Veredito: No geral é um fundo de papéis muito bom, com ótimos indicadores. Único ponto a ressaltar é o fato da gestão agir como trader em alguns momentos, o que normalmente gera rendimentos mais altos
+- Veredito: No geral é um fundo de papéis muito bom, com ótimos indicadores. Único ponto a ressaltar é o fato da gestão agir como trader em alguns momentos, o que normalmente gera rendimentos mais altos
 
 Referências:
 
