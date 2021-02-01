@@ -25,3 +25,8 @@ Fundo de papel: P / VP < 1
 Fundo de tijolo: 0.8 < P / VP < 1.3
 
 Algumas pessoas ainda utilizam o [Modelo de Gordon](https://pt.wikipedia.org/wiki/Modelo_de_Gordon) para ter uma avaliação mais detalhada dos ativos.
+
+
+## Opinião pessoal - Buy and Hold
+
+Não acredito que o investidor que realiza aportes mensais em fundos imobiliários deveria se preocupar muito com o preço. No longo prazo, e na média, há pouca diferença entre comprar na máxima mensal e na mínima mensal. O foco deve estar em aumentar os aportes e reinvestir os dividendos.

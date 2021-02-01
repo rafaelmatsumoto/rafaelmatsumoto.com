@@ -1,5 +1,5 @@
 ---
-title: "Dados sobre FIIs"
+title: "Coletando dados sobre FIIs"
 date: 2021-01-08T20:58:32-03:00
 draft: false
 tags: [finance, til1]
@@ -11,4 +11,4 @@ tags: [finance, til1]
 
 - Dados sobre preço e dividendos: [FundsExplorer](https://www.fundsexplorer.com.br/).
 
-- Tabela IFIX: Semelhante ao Ibovespa, é uma carteira teórica de ativos, normalmente contém os mais bem negociados: http://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-de-segmentos-e-setoriais/indice-fundos-de-investimentos-imobiliarios-ifix-composicao-da-carteira.htm
+- Tabela IFIX: Semelhante ao Ibovespa, é uma carteira teórica de ativos, normalmente contém os fundos mais bem negociados: http://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-de-segmentos-e-setoriais/indice-fundos-de-investimentos-imobiliarios-ifix-composicao-da-carteira.htm

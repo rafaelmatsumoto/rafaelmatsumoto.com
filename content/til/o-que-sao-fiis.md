@@ -5,8 +5,8 @@ draft: false
 tags: [finance, til1]
 ---
 
-FIIs são fundos de investimento que tem por finalidade a operação em ativos imobiliários de alto padrão (LCI, shoppings, prédios comerciais, galpões).
+FIIs são fundos de investimento que tem por finalidade a operação em ativos imobiliários de alto padrão (LCIs, shoppings, lajes corporativas, galpões logísticos).
 
-Como todo fundo de investimento, também possui suas principais características, como compra/venda de cotas e delegação de atividades de gestão.
+Possui as mesmas características de ações na bolsa, como compra/venda de cotas e delegação de atividades de gestão.
 
-É um tipo de investimento muito semelhante a compra de imóveis tradicionais, onde o investidor pode ganhar dinheiro com o provento dos aluguéis e valorização de cotas, a diferença é que FIIs possuem gestão profissional e é possível iniciar com valores MUITO menores (até mesmo 10 reais), porém vale ressaltar que o cotista não é de fato dono do patrimônio.
+É um tipo de investimento muito semelhante a compra de imóveis tradicionais, onde o investidor pode ganhar dinheiro com o provento dos aluguéis e valorização do patrimônio, a diferença é que esses possuem gestão profissional e é possível iniciar com valores MUITO menores do que a aquisição tradicional (até mesmo 10 reais), mas vale ressaltar que o cotista não é de fato dono do patrimônio.

@@ -7,4 +7,4 @@ tags: [finance, til1]
 
 O que é flipagem?
 
-Flipagem: movimento ocorrido na bolsa assim que as cotas de subscrição são colocadas em mercado, ou seja quando o fundo precisa captar novos recursos e um grande volume de cotas é distribuído no mercado, causando uma grande queda no preço.
+Flipagem é o movimento ocorrido na bolsa assim que as cotas de subscrição são colocadas em mercado. Ou seja quando o fundo precisa captar novos recursos e um grande volume de cotas é distribuído no mercado, causando uma grande queda no preço.

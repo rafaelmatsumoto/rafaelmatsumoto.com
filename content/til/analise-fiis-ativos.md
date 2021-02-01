@@ -17,13 +17,13 @@ A análise dos ativos é dividida em três partes:
 2. Vacância
 3. Tipos de contrato
 
-### Localização dos ativos
+### Localização
 
 Para analisar a localização dos ativos não é preciso ter um conhecimento socioeconômico aprofundado, o principal indiciador nesse caso é a qualidade das empresas inquilinas.
 
-Boas empresas sempre buscam uma localização estratégica para seus imóveis, e normalmente possuem caixa para arcar com os compromissos (aluguéis).
+Boas empresas sempre buscam uma localização estratégica para seus imóveis, e normalmente possuem caixa para arcar com os compromissos (alugel). Além de, no geral, fecharem contratos mais longos.
 
-No caso de shoppings, por conta da rotatividade alta de lojas, é preciso avaliar os números de vendas.
+No caso de shoppings, por conta da alta rotatividade de lojas, é preciso avaliar os dados sobre vendas.
 
 Exemplo de locatátios fundo HGLG11:
 
@@ -31,7 +31,7 @@ Exemplo de locatátios fundo HGLG11:
 
 ### Vacância
 
-É a taxa de desocupação dos imóveis, normalmente quando há menor disponibilidade de imóveis, o valor do aluguel aumenta, o que influencia diretamente na performance do fundo.
+É a taxa de desocupação dos imóveis, normalmente quando há menor disponibilidade de imóveis, o valor do aluguel aumenta, o que influencia diretamente na performance do fundo. A maior parte dos fundos de alta qualidade na bolsa tem vacância menor do que 10%.
 
 ### Tipos de contrato
 
@@ -41,4 +41,4 @@ Em investimentos imobiliários há dois tipos de contrato de aluguel, típicos e
 
 - Atípicos: contratos personalizados que atendem a demanda da empresa e do dono do imóvel, esse contrato geralmente dura mais de 10 anos e tem reajuste anual (periódico).
 
-O contrato atípico é muito mais vantajoso ao investidor, pois a chance da vacância aumentar é menor, porém normalmente fundos grandes possuem os dois tipos de contrato.
+O contrato atípico é muito mais vantajoso ao investidor, pois a chance da vacância aumentar é menor. Não é vantajoso para um empresa romper um contrato atípico.
