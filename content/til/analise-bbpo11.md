@@ -11,6 +11,8 @@ tags: [finance, til1]
 
 - Gestor: Votorantim Asset
 
+- O fundo ficou famoso pela notícia do fechamento de múltiplas agências do Banco do Brasil
+
 - Demonstração baseada no último rendimento R$: 1,08 (Dez/2020):
 
     - Possuindo 100 cotas (R$: 11.467 - Cotação 28/01/2021) você receberia 108 reais mensais

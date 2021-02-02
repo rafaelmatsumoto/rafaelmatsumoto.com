@@ -13,6 +13,8 @@ tags: [finance, til1]
 
 - Vacancia: 0%
 
+- Ótimos inquilinos que alugam 100% por contratos atípicos
+
 - Demonstração baseada no último rendimento R$: 0,39 (Dez/2020):
 
     - Possuindo 100 cotas (R$: 12.678 - Cotação 27/01/2021) você receberia 39 reais mensais
