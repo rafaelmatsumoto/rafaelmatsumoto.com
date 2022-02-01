@@ -1,21 +1,23 @@
 ---
-title: "Sobre"
+title: "About"
 date: 2020-01-30T21:37:58+05:30
 type: "page"
 ---
 
-Olá 👋, tudo bem?
+Hey there 👋
 
-Me chamo Rafael Matsumoto e trabalho como desenvolvedor de software na [Zup](https://www.zup.com.br/).
+My name is Rafael Matsumoto and I work as a software developer at [Zup](https://www.zup.com.br/).
 
-Anteriormente trabalhei em cargos mais voltados a Engenharia de Software tradicional, especialmente no desenvolvimento de produtos digitais.
+I've graduated with a Bachelor in Software Engineering degree and for 
+the vast majority of my career I've worked with backend engineering with a bit of infrastructure.
 
-Procuro estar sempre estudando assuntos relacionados a Engenharia de Dados como: Cloud Computing, Data Pipelines, Ferramentas de streaming, Sistemas Distribuídos e também conceitos de ciência de dados (Visão Computacional, NLP), além é claro dos conceitos fundamentais da Engenharia de Software.
+I'm always studying backend fundamentals such as: communication protocols, computer network, databases, caching, 
+API web frameworks and security. Feel free to contact me to chat about these topics at any time.
 
-Também gosto bastante de Docker, redes de computadores, Design Patterns e tenho Python como linguagem de programação preferida.
+My hobbies are swimming and reading
 
-Esse blog foi criado com a intuito de seguir os conceitos de: [Digital Garden](https://joelhooks.com/digital-garden) e [Learn in Public](https://www.swyx.io/writing/learn-in-public/)
+This blog is not intended to be an educational platform, but rather a 
+[Digital Garden](https://joelhooks.com/digital-garden), where I can just share things that I've learned and 
+solidify knowledge
 
-Tenho como hobbies a leitura (Kindle e Audiobooks) e a natação.
-
-Redes sociais que mantenho ativas: [Goodreads](https://www.goodreads.com/rafaelmatsumoto), [Twitter](twitter.com/rafaelmatsumot0) e [Last.fm](https://www.last.fm/user/rafaelmatsumoto).
+You can find me at: [Twitter](twitter.com/rafaelmatsumot0) and [Github](https://github.com/rafaelmatsumoto).
