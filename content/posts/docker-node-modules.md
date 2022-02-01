@@ -1,20 +1,19 @@
 ---
-title: "Docker para aplicações Node"
-description: "Melhorando a configuração do Docker em aplicações Node"
+title: "Docker for Node apps"
+description: "Improving Docker configuration in Node apps"
 date: 2020-02-02T17:57:24-03:00
 draft: false
 tags: [docker, node, docker-compose]
 ---
 
-Algumas dicas para melhorar o desenvolvimento de aplicações Node
-que utilizam o Docker.
+Here are some tips to improve Docker in Node applications.
 
-- Arquivo .dockerignore:
+-  The `.dockerignore` file:
 
-É comum que na maioria das aplicações se adote esta prática,
-porém a pasta node_modules aumenta de forma considerável o tamanho das imagens, e pode trazer problemas de compatibilidade entre máquina e container. Por isso colocá-los no arquivo .dockerignore é praticamente obrigatório.
+You should never add the `node_modules` folder straight you machine, it makes the image insanely larger and makes the build much slower. 
+For that reason, `node_modules` should be added to your `.dockerignore` file.
 
-_Antes_
+_Before_
 
 ```bash {hl_lines=[2]}
 docker build . -t node-docker
@@ -33,14 +32,14 @@ Step 4/6 : RUN yarn
 Step 5/6 : COPY . .
  ---&gt; Using cache
  ---&gt; 4278e990be2f
-Step 6/6 : CMD [&quot;yarn&quot;, &quot;start&quot;]
+Step 6/6 : CMD ["yarn", "start"
  ---&gt; Using cache
  ---&gt; 57e18f433874
 Successfully built 57e18f433874
 Successfully tagged node-docker:latest
 ```
 
-_Depois_
+_After_
 
 ```bash {hl_lines=[2]}
 docker build . -t node-docker
@@ -68,22 +67,21 @@ Successfully tagged node-docker:latest
 
 - Dockerfile
 
-_Dockerfile recomendado apenas para ambientes de desenvolvimento_
+_Dockerfile recommended for development environments only_
 
 ```dockerfile
-# As versões do Linux Alpine são extremamente leves e seguras.
+# Alpine images are known for being lightweight and secure.
 FROM node:12-alpine
 
-# O Docker utiliza cache ao buildar linhas que não mudam
-# É raro que a porta exposta mude,
-# então busque colocá-la nas primeiras linhas do arquivo,
-# ajuda a reduzir o tempo de build.
+# Docker caches layers that don't change when you run builds multiple times,
+# since it is rare that the exposed port changes, it is worth to place this command
+# on the top of the file.
 EXPOSE 3000
 
 WORKDIR /app
 
-# O wildcard * avisa ao docker para copiar o lockfile,
-# mas não falhar caso esse não exista.
+# The wildcard (*) tells Docker that it should copy the lockfile,
+# but not to throw an error if it doesn't exist.
 COPY package.json yarn.lock* ./
 
 RUN yarn && yarn cache clean
@@ -96,8 +94,7 @@ CMD ["yarn", "start"]
 - docker-compose.yml
 
 ```yml
-# A versão 2.x do docker-compose.yml é a recomendada para
-# ambientes de desenvolvimento.
+# The version 2.* of Docker Compose is recommended for development environments
 version: "2.4"
 
 services:
@@ -109,23 +106,20 @@ services:
       - .:/node/app
     depends_on:
       db:
-        # Nessa versão (^2.4) é possível definir uma condição
-        # para que o serviço de fato espere
-        # até que o container de dependência esteja realmente pronto,
-        # neste caso quando o postgres estiver disponível para
-        # conexão.
+        # In versions 2.*, it is possible to set a healthcheck, 
+        # so that your container waits for another one to be fully ready
+        # to start.
         condition: service_healthy
 
   db:
     image: postgres:9.6
     volumes:
-      # É recomendado fazer o uso de named-volumes para persistir
-      # informações do banco de dados. Adicionar um volume diretamente
-      # ao sistema operacional da máquina pode causar gargalos de
-      # performance e até mesmo não funcionar.
+      # It is highly recommended to use named-volumes to persist database information.
+      # Mapping the volume straight to the OS may cause performance bottlenecks and it might not work
+      # at all.
       - db-data:/var/lib/postgresql/data
     healthcheck:
-      # Teste para verificar a conexão.
+      # Test if the database is ready to connect.
       test: pg_isready -U postgres -h 127.0.0.1
 
 volumes:

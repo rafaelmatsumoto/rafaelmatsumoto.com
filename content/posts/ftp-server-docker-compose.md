@@ -1,13 +1,15 @@
 ---
 title: "FTP Server - Docker Compose"
 date: 2020-04-21T21:07:29-03:00
-description: "Simples setup de um servidor FTP local com Docker"
+description: "Setting up a local FTP server with Docker"
 draft: false
 tags: [docker, docker-compose]
 ---
 
-Recentemente tive de pesquisar sobre o protocolo FTP para um trabalho acadêmico, e para ter algo apresentável, resolvi fazer o setup de um servidor local.
+Recently I had an academic assignment about the FTP protocol. In order to present something better, 
+I had the idea to setup a local server to demonstrate.
 
-A primeira ideia que tive foi buscar uma imagem no Docker Hub, e a experiência acabou sendo tão simples que resolvi compartilhar no repositório a seguir.
+My initial thought was to search for something on Docker Hub (there is plenty of cool stuff there), and it turns
+out that the experience was so simple that I resolved to share it in the following repo.
 
 https://github.com/rafaelmatsumoto/ftp-server
