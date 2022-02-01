@@ -1,18 +1,16 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Deploy
 
 on:
   push:
     branches: [ main ]
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - run: curl -LO https://github.com/gohugoio/hugo/releases/download/v0.63.2/hugo_0.63.2_Linux-64bit.deb
-    - run: sudo dpkg -i hugo_0.63.2_Linux-64bit.deb
+    - uses: actions/checkout@v1
+    - name: hugo
+      uses: klakegg/actions-hugo@1.0.0
     - run: npm install -g firebase-tools
-    - run: pwd
-    - run: ls
+    - run: firebase deploy --token $FIREBASE_TOKEN
