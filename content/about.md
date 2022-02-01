@@ -6,7 +6,7 @@ type: "page"
 
 Olá 👋, tudo bem?
 
-Me chamo Rafael Stein Matsumoto e trabalho como desenvolvedor de software em projetos de dados na [Magrathea Labs](https://magrathealabs.com/).
+Me chamo Rafael Matsumoto e trabalho como desenvolvedor de software na [Zup](https://www.zup.com.br/).
 
 Anteriormente trabalhei em cargos mais voltados a Engenharia de Software tradicional, especialmente no desenvolvimento de produtos digitais.
 
