@@ -1,39 +1,35 @@
 ---
-title: "O que eu buscaria em um estágio na área de software (2021)"
+title: "What would I look for in an internship in 2022"
 date: 2020-12-28T18:57:42-03:00
-description: "E o porquê disso"
+description: "And why"
 draft: false
 tags: [career]
 ---
 
-Durante os últimos dois anos passei da fase de ser estagiário, para a fase de trabalhar e até mesmo mentorar estagiários, e acabei descobrindo alguns aspectos empresariais que são fundamentais em uma empresa no desenvolvimento e progresso de carreira dos estagiários, e também o que não é tão essencial. Nesse pequeno artigo tento mostar esse aprendizado e explicar um pouco sobre o porquê disso tudo.
+During the past years I’ve been achieving all the steps to become a Software Engineer – I’ve accomplished my internship, I mentored other interns and I discovered some programming aspects that are and aren’t fundamental in a successful company. In this small article I try to show this learning and I explain a little about why it all.
 
-# O que é fundamental
+# What’s fundamental?
+The code review practice: this is certainly the most fundamental feature to look for in an internship. It’s very likely that a newbie in the area still don’t know what the problems are of not following good practices when programming, and this is normal.
+That’s why having a strong code review culture, that is, your co-workers (generally more experienced) reviewing your code consistently is fundamental in developing as a professional, this is when you will really learn to program better and why it is to program this way.
 
-- Prática de code review: essa com certeza é feature mais fundamental para se buscar num estágio. É bem provável que você, iniciante na área, ainda não conheça quais são os problemas de não seguir boas práticas ao programar, e isso é absolutamente normal. Por isso ter uma cultura forte de code review, isto é, seus colegas de trabalho (normalmente mais experientes) revisando seu código consistentemente é fundamental no desenvolvimento como profissional, é nesse momento em que você de fato vai aprender a programar melhor e o porquê é programar dessa forma.
+- Business culture: How helpful the people you are working with are important for all career levels, but at this stage, where you will need constant help, it is even more necessary. (https://www.themuse.com/advice/the-3-career-mentors-everyone-should-have)
 
-- Cultura empresarial: o quão prestativas são as pessoas com quem se vai trabalhar é algo importante para todos os níveis de carreira, porém nessa fase, onde você precisará de ajuda constante é ainda mais necessário (https://www.themuse.com/advice/the-3-career-mentors-everyone-should-have).
+- Diversification of activities: It is very interesting that you have market experience in different activities of the profession (backend, frontend, DevOps/SRE, QA, Customer Support), as this will help you when choosing your next job as a junior or when deciding in which area of the same company will you work.
 
-- Diversificação de atividades: é bem interessante que você tenha experiência de mercado em diversas atividades da profissão (backend, frontend, DevOps/SRE, QA, Customer Support), pois isso lhe ajudará na hora de escolher seu próximo emprego como júnior ou então de decidir em qual área da mesma empresa irá trabalhar.
+- Implementation of automated tests: this type of practice helps to maintain some sanity between the development team and the operations team and is also good for beginners who will work on the project with greater confidence, because it is possible to change a piece of code and find out if it broke any pre-existing functionality.
 
-- Implementação de testes automatizados: esse tipo de prática ajuda a manter um pouco de sanidade entre o time de desenvolvimento e o time de operações, e também é bom para iniciantes que vão trabalhar no projeto com maior confiança, pois é possível alterar um trecho de código e descobrir se esse quebrou alguma funcionalidade pré-existente.
+# What’s very good but not essential
+- Salary: Money is Always good and extremely necessary. But an intern's earnings generally don't tend to vary much from company to company.
+- Remote Work: the possibility of working remotely is always very positive, but as an intern you may not be a game-changer.
 
-# O que é muito bom, mas não essencial
+- Business area in which the company operates: it's something interesting to consider starting from junior seniority, but for an internship it doesn't make much difference. Anyone who works in a software house ends up having contact with numerous business rules.
 
-- Salário: dinheiro é sempre bom, e extremamente necessário, mas os rendimentos de um estagiário _normalmente_ não costumam variar tanto de empresa para empresa.
+- Organizational maturity: there is a certain popular saying that says - "Working in new companies is building things, working in old companies is optimizing things". Not necessarily an absolute truth, nor a moral judgment, but it's a good thing to consider.
 
-- Trabalho remoto (fora da época de pandemia): a possibilidade de se trabalhar remotamente é sempre muito positiva, porém como estagiário talvez não seja um game-changer.
+# Which practically makes no difference
+- Stack of the company: whether the company uses the technologies that are in fashion, it doesn't make that much difference. Learning fashion technologies is good, as it can help you get a higher-paying job, but as an intern it is more important to learn the fundamentals of the profession (which do not necessarily depend on the tools that the company uses). (https://devskiller.com/infographic-highest-paying-tech-jobs/#Top_10_highest_paying_tech_jobs_by_skills)
 
-- Aréa de negócio na qual a empresa atua: é algo interessante de se considerar a partir de senioridade de júnior, mas para um estágio não faz tanta diferença. Quem trabalha em uma software house acaba tendo contato com inúmeras regras de negócio.
+- Video games, a ball pit, and a hipster coffee machine: knowledge that may have already become mainstream, but it is always good to point out that none of this has a significant impact on a job (in some cases they are made to keep you longer in the company)
 
-- Maturidade organizacional: existe um certo ditado popular que diz - "Trabalhar em empresas novas é construir coisas, trabalhar em empresas antigas é otimizar coisas". Não necessariamente uma verdade absoluta, nem um julgamento moral, mas é algo bom de se levar em consideração.
-
-# O que praticamente não faz diferença
-
-- Stack tecnológica da empresa: se a empresa usa ou não as tecnologias que estão na modinha, não faz tanta diferença assim. Aprender as tecnologias da moda é bom, pois pode te ajudar a conseguir um emprego de maior salário (https://devskiller.com/infographic-highest-paying-tech-jobs/#Top_10_highest_paying_tech_jobs_by_skills), porém como estagiário é mais importante aprender os fundamentos da profissão (que não necessariamente dependem das ferramentas que a empresa que a empresa utiliza).
-
-- Videogames, piscina de bolinhas e uma máquina de café hipster: conhecimento que talvez já tenha se tornado mainstream, mas sempre é bom ressaltar que nada disso tem impacto significativo em um trabalho (em alguns casos são feitos pra te prender mais tempo na empresa)
-
-## Conclusão
-
-Nem tudo o que está nessa lista são coisas acessíveis de se saber antes de entrar numa empresa, minha sugestão é utilizar as redes sociais (LinkedIn, Twitter) e perguntar para funcionários, atuais e antigos, sobre a empresa e verificar se a mesma não possui um blog/Medium onde publica artigos sobre a cultura empresarial. Também é sempre bom lembrar que temos uma ansiedade natural quando vamos fazer algo pela primeira vez, então é importante saber que erros vão acontecer e abraçar os ricos. Espero ter ajudado você leitor no ínicio de sua trajetória profissional.
+# Conclusion
+Not everything on this list is accessible things to know before joining a company. My suggestion is to use social networks (LinkedIn, Twitter) and ask current and former employees about the company and check if it doesn't have a blog/Medium where it publishes articles on corporate culture. It's also always good to remember that we have a natural anxiety when we're going to do something for the first time, so it's essential to know what mistakes are going to happen and embrace the rich. I hope to have helped you in the beginning of your professional trajectory.
