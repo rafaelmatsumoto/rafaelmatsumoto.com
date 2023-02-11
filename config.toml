@@ -19,6 +19,10 @@ copyright = "©"
 
 	featherIconsCDN = true
 
+    # favicon = "/static/img/favicon-16x16.png"
+
+    favicon = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
+
 # Nav.
 [[menu.main]]
 name = "Home"

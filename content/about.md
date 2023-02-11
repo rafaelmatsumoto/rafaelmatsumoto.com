@@ -6,13 +6,13 @@ type: "page"
 
 Hey there 👋
 
-My name is Rafael Matsumoto and I work as a software developer at [Zup](https://www.zup.com.br/).
+My name is Rafael Matsumoto and I work as a software developer at [MessageBird](https://messagebird.com).
 
 I've graduated with a Bachelor in Software Engineering degree and for 
 the vast majority of my career I've worked with backend engineering with a bit of infrastructure.
 
-I'm always studying backend fundamentals such as: communication protocols, computer network, databases, caching, 
-API web frameworks and security. Feel free to contact me to chat about these topics at any time.
+I'm always studying backend fundamentals such as: communication protocols, networking, database internals, caching and security. 
+Feel free to contact me to chat about these topics at any time.
 
 My hobbies are swimming and reading
 
