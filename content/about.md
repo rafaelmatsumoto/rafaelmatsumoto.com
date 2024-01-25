@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2020-01-30T21:37:58+05:30
+date: 2024-01-25T21:37:58+05:30
 type: "page"
 ---
 
@@ -14,7 +14,7 @@ the vast majority of my career I've worked with backend engineering with a bit o
 I'm always studying backend fundamentals such as: communication protocols, networking, database internals, caching and security. 
 Feel free to contact me to chat about these topics at any time.
 
-My hobbies are swimming and reading
+My hobbies are watching football and (preferrably old) movies with my wife. I also really enjoy going to the gym.
 
 This blog is not intended to be an educational platform, but rather a 
 [Digital Garden](https://joelhooks.com/digital-garden), where I can just share things that I've learned and 
