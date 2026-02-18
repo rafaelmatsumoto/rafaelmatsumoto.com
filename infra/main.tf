@@ -154,6 +154,7 @@ resource "aws_cloudfront_distribution" "website" {
     default_ttl            = 3600
     max_ttl                = 86400
     compress               = true
+    response_headers_policy_id = aws_cloudfront_response_headers_policy.security.id
 
     function_association {
       event_type   = "viewer-request"
@@ -240,6 +241,40 @@ resource "aws_cloudfront_function" "redirect_www" {
       return request;
     }
   EOF
+}
+
+# CloudFront security headers policy
+resource "aws_cloudfront_response_headers_policy" "security" {
+  name = "security-headers-policy"
+
+  security_headers_config {
+    content_type_options {
+      override = true
+    }
+
+    frame_options {
+      override     = true
+      frame_option = "DENY"
+    }
+
+    xss_protection {
+      override   = true
+      protection = true
+      mode_block = true
+    }
+
+    strict_transport_security {
+      override                   = true
+      access_control_max_age_sec = 31536000  # 1 year
+      include_subdomains         = true
+      preload                    = true
+    }
+
+    referrer_policy {
+      override        = true
+      referrer_policy = "strict-origin-when-cross-origin"
+    }
+  }
 }
 
 # Route53 DNS record pointing to CloudFront
