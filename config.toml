@@ -2,7 +2,10 @@ baseURL = "https://rafaelmatsumoto.com/"
 languageCode = "en-us"
 title = "Rafael Matsumoto"
 theme = "hugo-ink"
-paginate = 5
+disqusShortname = ""
+disableKinds = ["googleanalytics"]
+[pagination]
+  pagerSize = 5
 
 copyright = "©"
 
@@ -14,6 +17,7 @@ copyright = "©"
 
 [params]
 	subtitle = "Digital garden"
+disqusShortname = "myblog"
 
 	avatar = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
 
@@ -59,3 +63,9 @@ name = "Goodreads"
 icon = "book"
 url = "https://www.goodreads.com/rafaelmatsumoto"
 
+[deployment]
+
+[[deployment.targets]]
+name = "production"
+
+URL = "s3://rafaelmatsumoto.com?region=us-west-2"

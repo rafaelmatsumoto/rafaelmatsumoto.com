@@ -1,16 +1,48 @@
-name: Deploy
+name: Deploy to AWS S3 + CloudFront
 
 on:
   push:
     branches: [ main ]
 
+env:
+  AWS_REGION: us-west-2
+  S3_BUCKET: rafaelmatsumoto.com
+  CLOUDFRONT_DISTRIBUTION_ID: E3NBALABUDXAMU
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: hugo
-      uses: klakegg/actions-hugo@1.0.0
-    - run: npm install -g firebase-tools
-    - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build Hugo site
+      run: hugo --minify
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Sync to S3 bucket
+      run: |
+        aws s3 sync public/ s3://${{ env.S3_BUCKET }}/ \
+          --delete \
+          --cache-control "max-age=3600"
+
+    - name: Invalidate CloudFront cache
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
+          --paths "/*"
