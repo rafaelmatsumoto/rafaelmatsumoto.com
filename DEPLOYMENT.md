@@ -46,7 +46,7 @@ Set the following secrets in the repository settings (`Settings → Secrets and 
 
 ### IAM Policy for Deployment User
 
-Create an IAM user with the following policy (replace `S3_BUCKET` and `CLOUDFRONT_DISTRIBUTION_ID` with actual values):
+Create an IAM user with the following policy (replace `S3_BUCKET`, `AWS_ACCOUNT_ID`, and `CLOUDFRONT_DISTRIBUTION_ID` with actual values):
 
 ```json
 {
@@ -61,8 +61,8 @@ Create an IAM user with the following policy (replace `S3_BUCKET` and `CLOUDFRON
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::rafaelmatsumoto.com",
-                "arn:aws:s3:::rafaelmatsumoto.com/*"
+                "arn:aws:s3:::${S3_BUCKET}",
+                "arn:aws:s3:::${S3_BUCKET}/*"
             ]
         },
         {
@@ -70,7 +70,7 @@ Create an IAM user with the following policy (replace `S3_BUCKET` and `CLOUDFRON
             "Action": [
                 "cloudfront:CreateInvalidation"
             ],
-            "Resource": "arn:aws:cloudfront::741599489588:distribution/E3NBALABUDXAMU"
+            "Resource": "arn:aws:cloudfront::${AWS_ACCOUNT_ID}:distribution/${CLOUDFRONT_DISTRIBUTION_ID}"
         }
     ]
 }
@@ -85,10 +85,10 @@ If you need to deploy manually:
 hugo --minify
 
 # Sync to S3 (requires AWS credentials)
-aws s3 sync public/ s3://rafaelmatsumoto.com/ --delete --cache-control "max-age=3600"
+aws s3 sync public/ s3://${S3_BUCKET}/ --delete --cache-control "max-age=3600"
 
 # Invalidate CloudFront cache
-aws cloudfront create-invalidation --distribution-id E3NBALABUDXAMU --paths "/*"
+aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths "/*"
 ```
 
 ## Troubleshooting
@@ -100,18 +100,20 @@ aws cloudfront create-invalidation --distribution-id E3NBALABUDXAMU --paths "/*"
 
 ## Useful Commands
 
+Replace placeholders with actual values: `S3_BUCKET`, `CLOUDFRONT_DISTRIBUTION_ID`, `DOMAIN_NAME`.
+
 ```bash
 # Check CloudFront distribution status
-aws cloudfront get-distribution --id E3NBALABUDXAMU
+aws cloudfront get-distribution --id ${CLOUDFRONT_DISTRIBUTION_ID}
 
 # List S3 bucket contents
-aws s3 ls s3://rafaelmatsumoto.com/ --recursive
+aws s3 ls s3://${S3_BUCKET}/ --recursive
 
 # Check ACM certificate
 aws acm list-certificates --region us-east-1
 
 # Check DNS records
-dig rafaelmatsumoto.com
+dig ${DOMAIN_NAME}
 ```
 
 ## Hugo Configuration
