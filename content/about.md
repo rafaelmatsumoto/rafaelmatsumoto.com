@@ -20,4 +20,4 @@ This blog is not intended to be an educational platform, but rather a
 [Digital Garden](https://joelhooks.com/digital-garden), where I can just share things that I've learned and 
 solidify knowledge
 
-You can find me at: [Twitter](twitter.com/rafaelmatsumot0) and [Github](https://github.com/rafaelmatsumoto).
+You can find me at: [Twitter/X](https://x.com/rafaelmatsumot0) and [Github](https://github.com/rafaelmatsumoto).

@@ -7,7 +7,7 @@ disableKinds = ["googleanalytics"]
 [pagination]
   pagerSize = 5
 
-copyright = "©"
+copyright = "© 2026 Rafael Matsumoto"
 
 [markup]
   [markup.highlight]
@@ -17,6 +17,7 @@ copyright = "©"
 
 [params]
 	subtitle = "Digital garden"
+	description = "Digital garden of Rafael Matsumoto - software developer sharing insights on backend engineering, infrastructure, and technology."
 disqusShortname = "myblog"
 
 	avatar = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
