@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+
+<body>
+	<div class="container wrapper">
+		{{ partial "head.html" . }}
+
+		<div class="recent-posts section">
+			<div class="posts">
+				<div class="post">
+					<div class="post-header">
+						<div class="meta">
+							<div class="date">
+								<span class="day">404</span>
+								<span class="rest">Error</span>
+							</div>
+						</div>
+						<div class="matter">
+							<h4 class="title small">
+								{{ .Title }}
+							</h4>
+							<div class="description">
+								{{ .Content }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ partial "footer.html" . }}
+</body>
+
+</html>
