@@ -1,0 +1,12 @@
+# Copy this file to terraform.tfvars and replace values with your own
+# terraform.tfvars is ignored by git to prevent committing secrets
+
+domain_name = "your-domain.com"
+bucket_name = "your-domain.com"
+
+# Optional: add tags if needed
+# tags = {
+#   Project     = "YourProject"
+#   Environment = "Production"
+#   ManagedBy   = "Terraform"
+# }

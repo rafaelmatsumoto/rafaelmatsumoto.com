@@ -29,6 +29,19 @@ terraform plan
 terraform apply
 ```
 
+### Variables
+
+Configuration variables are defined in `variables.tf`. Create a `terraform.tfvars` file (ignored by git) with your values:
+
+```bash
+cp infra/terraform.tfvars.example infra/terraform.tfvars
+# Edit terraform.tfvars with your domain and bucket names
+```
+
+Required variables:
+- `domain_name`: Your domain name (e.g., "rafaelmatsumoto.com")
+- `bucket_name`: S3 bucket name (usually same as domain)
+
 ### State
 
 Terraform state is stored locally in `infra/.terraform/`. For team/production use, consider migrating to a remote backend (S3 + DynamoDB).
