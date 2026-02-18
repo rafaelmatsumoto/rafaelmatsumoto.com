@@ -18,6 +18,7 @@ copyright = "© 2026 Rafael Matsumoto"
 [params]
 	subtitle = "Digital garden"
 	description = "Digital garden of Rafael Matsumoto - software developer sharing insights on backend engineering, infrastructure, and technology."
+	copyright = "© 2026 Rafael Matsumoto"
 disqusShortname = "myblog"
 
 	avatar = "https://s.gravatar.com/avatar/132c621a9e8d6d2e6b95a4d58d4812ec"
