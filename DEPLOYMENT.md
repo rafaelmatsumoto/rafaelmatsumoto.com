@@ -50,16 +50,29 @@ Terraform state is stored locally in `infra/.terraform/`. For team/production us
 
 On every push to `main`, the site is built and deployed automatically via `.github/workflows/deploy.yml`.
 
-### Required GitHub Secrets
+### OIDC Configuration for GitHub Actions
 
-Set the following secrets in the repository settings (`Settings → Secrets and variables → Actions`):
+The deployment uses OpenID Connect (OIDC) for authentication, which is more secure than static credentials. GitHub Actions authenticates directly with AWS using short-lived tokens.
 
-- `AWS_ACCESS_KEY_ID` – IAM user access key with permissions below
-- `AWS_SECRET_ACCESS_KEY` – corresponding secret key
+#### Required GitHub Secret
 
-### IAM Policy for Deployment User
+Set the following secret in the repository settings (`Settings → Secrets and variables → Actions`):
 
-Create an IAM user with the following policy (replace `S3_BUCKET`, `AWS_ACCOUNT_ID`, and `CLOUDFRONT_DISTRIBUTION_ID` with actual values):
+- `AWS_ROLE_ARN` – ARN of the IAM role created by Terraform (output as `github_actions_role_arn`)
+
+#### Terraform Setup
+
+The Terraform configuration automatically creates:
+
+1. **OIDC Provider** for GitHub (`token.actions.githubusercontent.com`)
+2. **IAM Role** with trust policy allowing GitHub Actions from this repository
+3. **IAM Policy** with permissions to deploy to S3 and invalidate CloudFront
+
+After applying Terraform changes, copy the role ARN from the output and set it as the `AWS_ROLE_ARN` secret.
+
+#### Manual Role Creation (Alternative)
+
+If not using Terraform, create an IAM role with the following trust policy (replace `GITHUB_ORGANIZATION` and `GITHUB_REPOSITORY`):
 
 ```json
 {
@@ -67,29 +80,26 @@ Create an IAM user with the following policy (replace `S3_BUCKET`, `AWS_ACCOUNT_
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket",
-                "s3:GetObject",
-                "s3:PutObject",
-                "s3:DeleteObject"
-            ],
-            "Resource": [
-                "arn:aws:s3:::${S3_BUCKET}",
-                "arn:aws:s3:::${S3_BUCKET}/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudfront:CreateInvalidation"
-            ],
-            "Resource": "arn:aws:cloudfront::${AWS_ACCOUNT_ID}:distribution/${CLOUDFRONT_DISTRIBUTION_ID}"
+            "Principal": {
+                "Federated": "arn:aws:iam::${AWS_ACCOUNT_ID}:oidc-provider/token.actions.githubusercontent.com"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
+                },
+                "StringLike": {
+                    "token.actions.githubusercontent.com:sub": "repo:${GITHUB_ORGANIZATION}/${GITHUB_REPOSITORY}:*"
+                }
+            }
         }
     ]
 }
 ```
 
 ### Manual Deployment
+
+For local development or manual deployments (outside GitHub Actions), you'll need AWS credentials configured locally (via AWS CLI or environment variables). The OIDC configuration is only for GitHub Actions.
 
 If you need to deploy manually:
 

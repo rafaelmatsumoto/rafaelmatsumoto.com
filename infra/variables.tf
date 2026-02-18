@@ -19,3 +19,15 @@ variable "tags" {
     ManagedBy   = "Terraform"
   }
 }
+
+variable "github_organization" {
+  description = "GitHub organization/username for OIDC configuration"
+  type        = string
+  default     = "rafaelmatsumoto"
+}
+
+variable "github_repository" {
+  description = "GitHub repository name for OIDC configuration"
+  type        = string
+  default     = "rafaelmatsumoto.com"
+}
