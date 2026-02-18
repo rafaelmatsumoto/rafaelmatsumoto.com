@@ -9,6 +9,7 @@ This site is a static Hugo site hosted on AWS with Infrastructure as Code (IaC) 
 - **ACM Certificate**: Managed SSL/TLS certificate for `rafaelmatsumoto.com` and `*.rafaelmatsumoto.com`
 - **Route53**: DNS records pointing to CloudFront
 - **Origin Access Identity (OAI)**: Restricts S3 access to CloudFront only
+- **CloudFront Function**: Handles www to non-www redirect and path rewriting for S3 REST endpoint compatibility
 
 ## Terraform
 
@@ -123,6 +124,7 @@ The site uses the [hugo-ink](https://github.com/knadh/hugo-ink) theme. Some temp
 ### Important Config Values
 
 - `baseURL = "https://rafaelmatsumoto.com/"` – Must use HTTPS CloudFront domain
+- Menu URLs must include trailing slashes (e.g., `/posts/`) for S3 REST endpoint compatibility
 - `disqusShortname = "myblog"` – Placeholder to satisfy theme template
 - `disableKinds = ["googleanalytics"]` – Disable built-in Google Analytics templates
 - `[pagination] pagerSize = 5` – Replaces deprecated `paginate` setting

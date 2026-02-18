@@ -202,6 +202,7 @@ resource "aws_cloudfront_function" "redirect_www" {
       var request = event.request;
       var host = request.headers.host.value;
       
+      // Redirect www to non-www
       if (host.startsWith('www.')) {
         var newHost = host.replace('www.', '');
         var response = {
@@ -213,6 +214,28 @@ resource "aws_cloudfront_function" "redirect_www" {
         };
         return response;
       }
+      
+      // Rewrite paths for S3 REST endpoint
+      var uri = request.uri;
+      
+      // Skip rewriting for files with extensions (e.g., .css, .js, .png)
+      var lastSegment = uri.split('/').pop();
+      if (lastSegment.includes('.')) {
+        return request;
+      }
+      
+      // Ensure root path is not rewritten (CloudFront default root object handles it)
+      if (uri === '/') {
+        return request;
+      }
+      
+      // Add trailing slash if missing
+      if (!uri.endsWith('/')) {
+        uri = uri + '/';
+      }
+      
+      // Append index.html
+      request.uri = uri + 'index.html';
       
       return request;
     }
