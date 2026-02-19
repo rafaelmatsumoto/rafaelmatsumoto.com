@@ -96,5 +96,11 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for full infrastructure documentation.
 
 ## License
 
-Content © Rafael Matsumoto – All rights reserved.  
-Code (Hugo templates, Terraform configurations) is available under the MIT License.
+### Content
+All written content (blog posts, TIL entries, pages) is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CONTENT.md).
+
+### Code
+All code (Hugo template overrides, Terraform configurations, GitHub Actions workflows, scripts) is licensed under [MIT License](LICENSE-CODE.md).
+
+### Theme
+This site uses the [hugo-ink](https://github.com/knadh/hugo-ink) theme which is also licensed under MIT License.
