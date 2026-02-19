@@ -8,7 +8,7 @@
 
 		<div class="post">
 			<div class="post-header">
-				{{ if ne .Date.Year 1 }}
+				{{ if and (ne .Date.Year 1) (ne .Type "page") }}
 				<div class="meta">
 					<div class="date">
 						<span class="day">{{ dateFormat "02" .Date }}</span>
@@ -44,5 +44,10 @@
 
 
 
+			{{ if ne .Type "page" }}
 			<a href="{{ .Site.BaseURL }}">
-				<- Voltar para a página principal</a> </div> </div> {{ partial "footer.html" . }} </body> </html>
+				<- Voltar para a página principal</a>
+			{{ end }}
+		</div>
+	</div>
+	{{ partial "footer.html" . }} </body> </html>
