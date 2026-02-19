@@ -165,6 +165,32 @@ const markdown = await response.text();
 4. **Check `Content-Type`** – `text/markdown` for markdown files
 5. **Process frontmatter** – use metadata for context understanding
 
+## Repository Conventions for AI Development Agents
+
+When making changes to this repository, AI agents must follow **Conventional Commits** specification:
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+**Common Types**:
+- `feat`: New feature
+- `fix`: Bug fix
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc.)
+- `refactor`: Code refactoring
+- `test`: Adding or modifying tests
+- `chore`: Maintenance tasks, dependencies
+
+**Examples**:
+- `feat: add markdown output for AI agents`
+- `fix: correct content type for markdown files`
+- `docs: update AGENTS.md with commit conventions`
+
 ## Feedback and Contact
 
 For questions about content or technical implementation:
