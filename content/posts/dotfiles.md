@@ -1,28 +1,28 @@
 ---
 title: "Dotfiles"
 date: 2020-07-22T22:53:00-03:00
-description: "O que são dotfiles e porque utilizá-los?"
+description: "What are dotfiles and why use them?"
 draft: false
 tags: [general]
 ---
 
-# O que são dotfiles?
+# What are dotfiles?
 
-Dotfiles são arquivos de configuração utilizados em sistemas operacionais baseados em Unix, para configurar o vim, zsh, npm e etc...
+Dotfiles are configuration files used in Unix-based operating systems to configure tools like vim, zsh, npm, etc.
 
-Este nome se deve ao fato de, geralmente, possuírem um '.' como primeiro caractere, e portanto são considerados arquivos ocultos.
+The name comes from the fact that they usually start with a '.' as the first character, making them hidden files.
 
-Como dotfiles são apenas arquivos de texto, tornam se perfeitos para hospedagem num repositório no Github.
+Since dotfiles are just text files, they are perfect for hosting in a GitHub repository.
 
-# Por que utilizar dotfiles?
+# Why use dotfiles?
 
-Ao longo dos anos, é provável que você comece a automatizar e configurar seu sistema operacional da forma que melhor se adapta ao seu fluxo de trabalho. Também é provável que você troque de OS (especialmente se estiver no Linux) algumas vezes, e configurar todo o sistema a cada troca pode ser uma tarefa extremamente tediosa.
+Over the years, you'll likely start automating and configuring your operating system to best fit your workflow. You'll also probably switch operating systems (especially if you're on Linux) several times, and configuring the entire system each time can be extremely tedious.
 
-Por isso, dotfiles são uma maneira relativamente simples de gerenciar sua configuração pessoal. Além disso, provavelmente é o único projeto de código que a pessoa desenvolvedora levará para o restante da vida.
+Therefore, dotfiles are a relatively simple way to manage your personal configuration. Additionally, it's probably the only code project a developer will carry for the rest of their life.
 
-# Como gerenciar dotfiles?
+# How to manage dotfiles?
 
-Há várias estratégias para gerenciar dotfiles e arquivos de configuração, encontrei alguns bons tutoriais em:
+There are several strategies for managing dotfiles and configuration files. I found some good tutorials at:
 
 - https://www.atlassian.com/git/tutorials/dotfiles
 

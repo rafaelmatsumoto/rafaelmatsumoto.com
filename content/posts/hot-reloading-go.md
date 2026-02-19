@@ -1,30 +1,30 @@
 ---
 title: "Hot Reloading Go"
-description: "Utilizando Docker e reflex para desenvolver um web server em Go"
+description: "Using Docker and reflex to develop a web server in Go"
 date: 2020-02-01T10:37:56-03:00
 draft: false
 tags: [docker, go, docker-compose]
 ---
 
-_O exemplo utilizado nesse post foi baseado na seção 1.7 do livro 'The Go Programming Language'_
+_The example used in this post is based on section 1.7 of the book 'The Go Programming Language'_
 
-Ao realizar a leitura do capítulo citado, notei a facilidade de se iniciar
-um web server com a linguagem Go, tive a ideia de
-implementar um hot-reloader do zero, ferramenta muito comum em frameworks para a web e que auxilia consideravelmente na produtividade ao programar.
+While reading the mentioned chapter, I noticed how easy it is to start
+a web server with the Go language, which gave me the idea to
+implement a hot-reloader from scratch, a tool very common in web frameworks that significantly aids programming productivity.
 
-A seguir há um passo-a-passo de como realizei a implementação.
+Below is a step-by-step guide of how I implemented it.
 
-Código: https://github.com/rafaelmatsumoto/hotreloading-go
+Code: https://github.com/rafaelmatsumoto/hotreloading-go
 
-## Pré-requisitos:
+## Prerequisites:
 
 - Docker
 - Docker Compose
 - Go
 
-## Guia
+## Guide
 
-Primeiro passo, criar um script básico para rodar a aplicação:
+First step, create a basic script to run the application:
 
 ```golang
 // ./main.go
@@ -47,23 +47,23 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Para rodar a aplicação é preciso executar o comando:
+To run the application, execute the command:
 
 <pre>go run main.go &</pre>
 
-Após isso, ao realizar uma requisição GET a seguinte resposta é obtida:
+After that, when making a GET request, the following response is obtained:
 
 <pre>http localhost:8000
 <font color="#0087FF">HTTP</font><font color="#8A8A8A">/</font><font color="#00AFAF">1.1</font><font color="#8A8A8A"> </font><font color="#00AFAF">200</font><font color="#8A8A8A"> </font><font color="#AF8700">OK</font>
 <font color="#8A8A8A">Content-Length: </font><font color="#00AFAF">15</font>
-<font color="#8A8A8A">Content-Type: </font><font color="#00AFAF">text/plain; charset=utf-8</font>
+<font color="#8A8A8A">Content-Type: </font<｜DSML｜parameter name="color" string="true">#00AFAF">text/plain; charset=utf-8</font>
 <font color="#8A8A8A">Date: </font><font color="#00AFAF">Sat, 01 Feb 2020 16:55:20 GMT</font>
 
 <font color="#8A8A8A">URL.Path = &quot;/&quot;</font></pre>
 
-### Implementando a funcionalidade de hot reloading
+### Implementing hot reloading functionality
 
-É necessário criar um Dockerfile com a seguinte configuração:
+We need to create a Dockerfile with the following configuration:
 
 ```dockerfile
 # ./Dockerfile
@@ -77,8 +77,8 @@ COPY reflex.conf /
 ENTRYPOINT ["reflex", "-c", "/reflex.conf"]
 ```
 
-A biblioteca [reflex](https://golang.org/pkg/reflect/) permite adicionar um listener para executar comandos sempre que algum tipo de arquivo
-for alterado, a configuração utilizada foi:
+The [reflex](https://golang.org/pkg/reflect/) library allows adding a listener to execute commands whenever certain file types
+are changed. The configuration used was:
 
 ./reflex.conf
 
@@ -86,9 +86,9 @@ for alterado, a configuração utilizada foi:
 -r '(\.go$|go\.mod)' -s go run main.go &
 ```
 
-Essa configuração determina que, se um arquivo com a extensão .go ou nomeado go.mod for alterado, o servidor é reinicializado automaticamente.
+This configuration determines that if a file with the .go extension or named go.mod is changed, the server is automatically restarted.
 
-Após essa etapa, criamos um arquivo docker-compose.yml para auxiliar no uso do Docker:
+After this step, we create a docker-compose.yml file to assist with Docker usage:
 
 ```yml
 # ./docker-compose.yml
@@ -103,7 +103,7 @@ services:
       - 8000:8000
 ```
 
-E alteramos o script principal para o servidor aceitar requisições externas:
+And we modify the main script for the server to accept external requests:
 
 ```golang {hl_lines=[13,"36-43"]}
 // ./main.go
@@ -126,8 +126,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-Então rodamos o comando <pre>docker-compose up -d</pre> e é isto, toda nova alteração será automaticamente implementada.
+Then we run the command <pre>docker-compose up -d</pre> and that's it, every new change will be automatically implemented.
 
-Exemplo na prática:
+Example in practice:
 
 <script id="asciicast-1lIUUTqHHKZuQi50OOQUQ3G66" src="https://asciinema.org/a/1lIUUTqHHKZuQi50OOQUQ3G66.js" async></script>
