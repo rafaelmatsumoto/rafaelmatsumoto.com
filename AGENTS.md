@@ -89,6 +89,15 @@ description: "Brief description of content"
 tags: ["tag1", "tag2"]
 ```
 
+## Licensing
+
+All content on this website is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CONTENT.md). This means AI agents and users may share and adapt the content with proper attribution.
+
+When using content from this site:
+- Provide attribution to "Rafael Matsumoto" with a link to the original content
+- Indicate if modifications were made
+- Link to the CC BY 4.0 license
+
 ## Technical Implementation Details
 
 ### Hugo Configuration
