@@ -7,6 +7,22 @@ disableKinds = ["googleanalytics"]
 [pagination]
   pagerSize = 5
 
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "Markdown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.Markdown]
+    name = "Markdown"
+    mediaType = "text/markdown"
+    baseName = "index"
+    isPlainText = true
+    rel = "alternate"
+    permalinkable = false
+
 copyright = "© 2026 Rafael Matsumoto"
 
 [markup]
