@@ -174,12 +174,15 @@ resource "aws_cloudfront_distribution" "website" {
     minimum_protocol_version = "TLSv1.2_2021"
   }
 
+  # Custom error responses for user-friendly error pages
   custom_error_response {
     error_code         = 404
     response_code      = 404
     response_page_path = "/404.html"
   }
 
+  # S3 returns 403 for missing files when using Origin Access Identity (OAI)
+  # Convert to 404 to show custom error page instead of S3 XML error
   custom_error_response {
     error_code         = 403
     response_code      = 404
