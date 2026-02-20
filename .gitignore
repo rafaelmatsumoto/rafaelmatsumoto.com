@@ -13,13 +13,4 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
-# Created by https://www.gitignore.io/api/firebase
-# Edit at https://www.gitignore.io/?templates=firebase
 
-### Firebase ###
-.idea
-**/node_modules/*
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
