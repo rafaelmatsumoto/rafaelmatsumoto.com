@@ -9,6 +9,7 @@ env:
   AWS_REGION: us-west-2
   S3_BUCKET: rafaelmatsumoto.com
   CLOUDFRONT_DISTRIBUTION_ID: E3NBALABUDXAMU
+  HUGO_VERSION: "0.156.0"
 
 jobs:
   deploy:
@@ -23,38 +24,96 @@ jobs:
       with:
         submodules: recursive
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
+    - name: Install dependencies
+      run: |
+        set -e
+        sudo apt-get update
+        sudo apt-get install -y jq curl
+
+    - name: Get OIDC token
+      id: oidc-token
+      uses: actions/github-script@v6
       with:
-        hugo-version: 'latest'
-        extended: true
+        script: |
+          const token = await core.getIDToken('sts.amazonaws.com')
+          core.setOutput('token', token)
+
+    - name: Install Hugo
+      run: |
+        set -e
+        curl -L -o hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+        tar -xzf hugo.tar.gz hugo
+        sudo mv hugo /usr/local/bin/
+        hugo version
 
     - name: Build Hugo site
       run: hugo --minify
 
-    - name: Configure AWS credentials (OIDC)
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-        aws-region: ${{ env.AWS_REGION }}
+    - name: Configure AWS credentials via OIDC
+      env:
+        AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
+        OIDC_TOKEN: ${{ steps.oidc-token.outputs.token }}
+      run: |
+        set -e
+        # Check required secret is set
+        if [ -z "$AWS_ROLE_ARN" ]; then
+          echo "Error: AWS_ROLE_ARN secret is not set. Please add it to repository secrets."
+          exit 1
+        fi
+        # OIDC_TOKEN is already set via env from previous step
+        if [ -z "$OIDC_TOKEN" ]; then
+          echo "Error: OIDC token is empty. Check OIDC configuration."
+          exit 1
+        fi
+        
+        # Assume role with web identity
+        CREDENTIALS=$(aws sts assume-role-with-web-identity \
+          --role-arn "$AWS_ROLE_ARN" \
+          --role-session-name "GitHubActions-Deploy" \
+          --web-identity-token "$OIDC_TOKEN" \
+          --duration-seconds 900 \
+          --output json)
+        
+        # Export AWS credentials for current shell and subsequent steps
+        export AWS_ACCESS_KEY_ID=$(echo "$CREDENTIALS" | jq -r '.Credentials.AccessKeyId')
+        export AWS_SECRET_ACCESS_KEY=$(echo "$CREDENTIALS" | jq -r '.Credentials.SecretAccessKey')
+        export AWS_SESSION_TOKEN=$(echo "$CREDENTIALS" | jq -r '.Credentials.SessionToken')
+        
+        # Also set for subsequent steps via GITHUB_ENV
+        echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> $GITHUB_ENV
+        echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $GITHUB_ENV
+        echo "AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN" >> $GITHUB_ENV
+        
+        # Verify credentials
+        aws sts get-caller-identity
 
     - name: Sync to S3 bucket
       run: |
+        set -e
         aws s3 sync public/ s3://${{ env.S3_BUCKET }}/ \
           --delete \
           --cache-control "max-age=3600"
 
     - name: Set markdown content type
       run: |
-        aws s3 cp s3://${{ env.S3_BUCKET }}/ s3://${{ env.S3_BUCKET }}/ \
-          --recursive \
-          --exclude "*" \
-          --include "*.md" \
-          --content-type "text/markdown" \
-          --metadata-directive REPLACE
+        set -e
+        # Count markdown files in S3; skip if none
+        MD_COUNT=$(aws s3 ls s3://${{ env.S3_BUCKET }}/ --recursive | grep -c '\.md$' || true)
+        if [ "$MD_COUNT" -gt 0 ]; then
+          aws s3 cp s3://${{ env.S3_BUCKET }}/ s3://${{ env.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.md" \
+            --content-type "text/markdown" \
+            --metadata-directive REPLACE
+          echo "Updated content type for $MD_COUNT markdown files"
+        else
+          echo "No markdown files found to update"
+        fi
 
     - name: Invalidate CloudFront cache
       run: |
+        set -e
         aws cloudfront create-invalidation \
           --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
           --paths "/*"
