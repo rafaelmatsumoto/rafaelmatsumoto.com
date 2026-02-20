@@ -200,6 +200,31 @@ When making changes to this repository, AI agents must follow **Conventional Com
 - `fix: correct content type for markdown files`
 - `docs: update AGENTS.md with commit conventions`
 
+## Repository Security
+
+This repository implements security best practices for public repositories:
+
+### 1. Branch Protection
+- **Requires pull request reviews** before merging to `main` branch
+- **1 approving review** minimum required
+- **Code owner reviews** enabled (via `.github/CODEOWNERS`)
+- **No force pushes** or branch deletion allowed
+- **Conversation resolution** required before merging
+
+### 2. GitHub Actions Security
+- **OIDC authentication** for AWS deployment (no static credentials)
+- **Restricted workflow permissions** (read-only by default)
+- **Fork pull request workflows** require approval
+
+### 3. CODEOWNERS File
+- All files owned by `@rafaelmatsumoto`
+- Required for code owner review enforcement
+
+### 4. Setup Script
+A configuration script is available at `scripts/setup-github-security.sh` to apply these settings via GitHub CLI.
+
+**Note for private repositories**: Branch protection requires GitHub Pro. Make repository public to enable full protection.
+
 ## Feedback and Contact
 
 For questions about content or technical implementation:
