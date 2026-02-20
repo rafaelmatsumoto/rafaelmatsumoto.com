@@ -220,10 +220,14 @@ This repository implements security best practices for public repositories:
 - All files owned by `@rafaelmatsumoto`
 - Required for code owner review enforcement
 
-### 4. Setup Script
-A configuration script is available at `scripts/setup-github-security.sh` to apply these settings via GitHub CLI.
+### 4. Security Features Enabled
+- **Repository visibility**: Public (security features fully enabled)
+- **Secret scanning**: Enabled for detecting secrets in code
+- **Secret scanning push protection**: Blocks commits containing secrets
+- **Dependabot security updates**: Automatically updates vulnerable dependencies
+- **Dependency graph**: Enabled for security insights
 
-**Note for private repositories**: Branch protection requires GitHub Pro. Make repository public to enable full protection.
+**Security status**: All branch protection and security features are active.
 
 ## Feedback and Contact
 
